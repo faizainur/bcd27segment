@@ -1,0 +1,12 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library work;
+use work.multiplexer4in.ALL;
+use work.decoder_bcd_7seg.ALL;
+
+entity display_7segment is
+	Port (
+	I1 : in STD_LOGIC_VECTOR(3 downto 0);
+	I2 : in STD_LOGIC_VECTOR(3 downto 0);
+	I3 : in STD_LOGIC_VECTOR(3 downto 0);
+end entity;

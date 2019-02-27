@@ -1,0 +1,28 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity multiplexer4in is 
+	Port ( 
+		select_in : in STD_LOGIC_VECTOR(3 downto 0);
+		I1 : in STD_LOGIC_VECTOR(3 downto 0);
+		I2 : in STD_LOGIC_VECTOR(3 downto 0);
+		I3 : in STD_LOGIC_VECTOR(3 downto 0);
+		I4 : in STD_LOGIC_VECTOR(3 downto 0);
+		out_mux: out STD_LOGIC_VECTOR(3 downto 0);
+		);
+end entity;
+
+architecture mux of multiplexer4in is -- multiplexer 4 input
+begin
+	if ( select_in = "0000" ) then
+		out_mux <= I1;
+	elsif ( select_in = "0001" ) then
+		out_mux <= I2;
+	elsif ( select_in = "0010" ) then
+		out_mux <= I3;
+	elsif ( select_in = "0011" ) then
+		out_mux <= I4;
+	end if;
+end mux;
+
+
